@@ -18,20 +18,26 @@ import java.util.UUID;
 
 public class CrimeFragment extends Fragment {
 
-    public static final String EXTRA_CRIME_ID =
-            "com.bignerdranch.android.criminalintent.crime_id";
+    public static final String EXTRA_CRIME_ID = "criminalintent.crime_id";
 
     private Crime mCrime;
     private EditText mTitleField;
     private Button mDateButton;
     private CheckBox mSolvedCheckBox;
 
+    public static CrimeFragment newInstance(UUID crimeId) {
+        Bundle args = new Bundle();
+        args.putSerializable(EXTRA_CRIME_ID, crimeId);
+        CrimeFragment fragment = new CrimeFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //mCrime = new Crime();
-        UUID crimeId = (UUID)getActivity().getIntent()
-                .getSerializableExtra(EXTRA_CRIME_ID);
+
+        UUID crimeId = (UUID)getArguments().getSerializable(EXTRA_CRIME_ID);
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
     }
 

@@ -1,4 +1,4 @@
-package criminalintent.k.dessel.ru.criminalintent;
+package ru.k.dessel.criminalintent;
 
 import android.support.v4.app.Fragment;
 

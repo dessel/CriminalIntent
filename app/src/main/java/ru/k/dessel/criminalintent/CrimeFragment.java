@@ -1,10 +1,8 @@
-package criminalintent.k.dessel.ru.criminalintent;
+package ru.k.dessel.criminalintent;
 
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -27,7 +25,7 @@ import java.util.UUID;
 
 public class CrimeFragment extends Fragment {
 
-    public  static final String EXTRA_CRIME_ID = "criminalintent.crime_id";
+    public  static final String EXTRA_CRIME_ID = "ru.k.dessel.criminalintent.crime_id";
     private static final String DIALOG_DATE = "date";
 
     private static final int    REQUEST_DATE = 0;

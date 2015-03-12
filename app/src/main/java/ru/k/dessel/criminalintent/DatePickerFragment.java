@@ -1,4 +1,4 @@
-package criminalintent.k.dessel.ru.criminalintent;
+package ru.k.dessel.criminalintent;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.DatePicker;
@@ -16,8 +17,7 @@ import java.util.GregorianCalendar;
 
 public class DatePickerFragment extends DialogFragment {
 
-    public static final String EXTRA_DATE =
-            "com.bignerdranch.android.criminalintent.date";
+    public static final String EXTRA_DATE = "ru.k.dessel.criminalintent.date";
 
     private Date mDate;
 
@@ -30,6 +30,7 @@ public class DatePickerFragment extends DialogFragment {
     }
 
     @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         mDate = (Date) getArguments().getSerializable(EXTRA_DATE);
 

@@ -1,4 +1,4 @@
-package criminalintent.k.dessel.ru.criminalintent;
+package ru.k.dessel.criminalintent;
 
 import android.content.Intent;
 import android.os.Bundle;

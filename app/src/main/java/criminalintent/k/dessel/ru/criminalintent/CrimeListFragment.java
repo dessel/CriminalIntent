@@ -40,7 +40,9 @@ public class CrimeListFragment extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = super.onCreateView(inflater, container, savedInstanceState);
+        View v = inflater.inflate(R.layout.fragment_empty_list, container, false);
+        /*ListView view = (ListView)v.findViewById(android.R.id.list);
+        view.setEmptyView(v.findViewById(android.R.id.empty));*/
 
         if (mSubtitleVisible) {
             getActivity().getActionBar().setSubtitle(R.string.subtitle);
